@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box1 {
+      background-color: #fc6;
+    }
+    .box1 p {
+      width: 100px;
+      height: 100px;
+      background: skyblue;
+    }
+
+    /* 
+    a2를 옮기는 기본적인 방법
+    .box1 .a2 {
+      margin-left: 100px;
+    }
+     */
+/* 
+중요! position을 사용할 때는 꼭 top, left, right, bottom으로 위치를 지정해야합니다!
+position: relative는 원래 위치를 기준으로 얼만큼 움직일지 정하는 것
+*/
+    .box1 .a2 {
+      position: relative;
+      top: 0px;
+      left: 100px;
+    }
+    /* 
+    position: absolute 
+      absolute는 공중에 떳다고 생각하자
+      absolute는 기준을 줄 수 있다.
+      내가 원하는 기준을 잡고 position: relative를 준다.
+      기준은 부모 혹은 조상에 잡는다.
+    */
+    .box2 {
+      background: pink;
+      position: relative;
+    }
+    .box2 p {
+      width: 100px;
+      height: 100px;
+      background: skyblue;
+    }
+    .box2 .b2 {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+    /* 
+    position: fixed
+    position: fixed도 position: absolute와 같이 공중에 떠있다고 생각하자자
+    position: fixed의 기준은 보이는 화면전체를 기준으로 움직인다.
+    */
+    .box3 {
+      background: red;
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+    <div class="box1">
+        <p class="a1">a1</p>
+        <p class="a2">a2</p>
+        <p class="a3">a3</p>
+    </div>  
+    <div class="box2">
+      <p class="b1">b1</p>
+      <p class="b2">b2</p>
+      <p class="b3">b3</p>
+  </div>
+  <div class="box3">position:fixed</div> 
+</body>
+</html>

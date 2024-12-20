@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      background: #fc6;
+      width: 200px;
+      height: 200px;
+      margin: 50px 0 20px;
+    }
+    .box2 {
+      background: #fcc;
+      width: 200px;
+      height: 200px;
+      padding-top: 50px;
+      padding-right: 10px;
+      padding-bottom: 30px;
+      padding-left: 0;
+    }
+    .box_sizing1 {
+      width: 200px;
+      background: #fcc;
+      height: 100px;
+      padding: 30px;
+    }
+    /* padding을 넣어주면 넓이가 커진다. */
+    /* box-sizing: border-box;를 사용해 padding으로 인해
+       넓이가 커지는 것을 방지 */
+    .box_sizing2 {
+      width: 200px;
+      background: #fcc;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+    <h2>공간</h2>
+    <p class="box1">box1</p>
+    <p class="box2">box2</p>
+    <h2>box-sizing</h2>
+    <p class="box_sizing1">box-sizing</p>
+    <p class="box_sizing2">box-sizing</p>
+</body>
+</html>

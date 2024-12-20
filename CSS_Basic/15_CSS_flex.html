@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <style>
+    /* 
+    flex 속성을 사용하면 반응형 홈페이지를 작업하기 쉬워진다.
+    편리하다.
+
+    사용방법
+    1. 나열을 적용하고자 하는 태그의 부모에게 display: flex;를 넣어준다.
+    2. 
+    */
+      /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .flex {
+        background: #ccc;
+        height: 300px;
+        width: 50%;
+        display: flex;
+      }
+      .flex>p {
+        width: 100px;
+        padding: 10px;
+        background: tomato;
+        border: 1px solid black;
+      }
+      .flex>div {
+        width: 100px;
+        padding: 10px;
+        background: #24bbaf;
+        border: 1px solid black;
+      } */
+
+      /* 
+      flex 나열방법
+      flex-direction: row (기본값)
+      flex-direction: column
+      flex-direction: column-reverse
+      flex-direction: row
+      flex-direction: row-reverse
+
+      화면을 줄이거나 늘릴때 화면이 반응하는것
+      부모가 자식보다 크기가 작아질 때, 밑으로 내려가게 하는것
+      flex-wrap: wrap;
+      flex-wrap: nowrap;(기본값)
+      flex-wrap: warp-reverse;
+
+      수평정렬을 할때 쓰는것
+      justify-content: flex-start; (기본)
+      justify-content: cent-end; 끝 정렬렬
+      justify-content: space-between;  사이공간 공동 분배(화면 끝에 붙는다)
+      justify-content: space-center; 가운데정렬
+      justify-content: flex-around; 왼쪽 오른쪽 공간 분배배(화면 끝에 붙지 않는다)
+
+      수직정렬
+      align-items: stretch; (기본)
+      align-items: flex-start; 위에 붙이기
+      align-items: flex-end; 아래에 붙이기
+      align-items: center; 가운데 정렬
+      align-items: baseline; 아래 기준선
+
+      사이공간 공동분배 세로버전
+      align-content: space-around;
+      align-content: space-between;
+      align-content: flex-start;
+      align-content: flex-end;
+
+      정가운데 정렬
+      1) 수평정렬
+      2) 수직정렬
+
+      위치순서정하기
+      .flex .c{order: 1;}
+      .flex .a{order: 2;}
+      .flex .b{order: 3;}
+
+      빈 여백을 나누어 분배해 채우는 속성 flex-grow
+      .flex .a {flex-grow: 1;}
+      .flex .b {flex-grow: 2;}
+      .flex .c {flex-grow: 1;}
+
+      화면을 줄일때 반응 양을 조절하기
+      .flex {flex-shrink: 0;}
+      */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .flex {
+        background: #ccc;
+        height: 300px;
+        width: 50%;
+        display: flex;
+      }
+      .flex>div {
+        width: 100px;
+        padding: 10px;
+        background: #24bbaf;
+        border: 1px solid black;
+      }
+  </style>
+</head>
+<body>
+  <!-- <div class="flex">
+      <p class="a">A</p>
+      <div class="b">B</div>
+      <div class="c">C</div>
+  </div> -->
+  <div class="flex">
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+      <div class="a">A</div>
+      <div class="b">B</div>
+      <div class="c">C</div>
+  </div>
+</body>
+</html>

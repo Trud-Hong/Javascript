@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* .point에 .은 class를 지칭하는 것이다.  */
+/* 외부문서를 연결하는 방법은 head태그 안에
+<link href="주소" rel="stylesheet">태그를 넣는다.
+rel은 relation의 약자 stylesheet는 꾸며주는 종이입니다라는 표현 */
+.point {
+    background: tomato;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 100px;
+      height: 100px;
+    }
+    .box1 p{
+      background: #fc6;
+    }
+    /* 
+    block 요소는 width 값이 100%이다
+    글자는 inline 요소
+    이미지는 inline-block요소소
+    */
+
+    /*
+    인라인 요소를 정렬할때는 부모요소(block 요소)에 text-align을 사용해야 한다.
+    text-align: center; 는 상속되는 css이다.
+    */
+    .box1 .p1 {
+      text-align: left;
+    }
+    .box1 .p2 {
+      text-align: center;
+    }
+    .box1 .p3 {
+      text-align: right;
+    }
+
+  </style>
+  
+</head>
+
+<body>
+  <h2>text-align 인라인요소를 정렬</h2>
+  <div class="box1">
+      <p class="p1">
+        text-align:left; 왼쪽정렬<br>
+        <img src="./images/292-sample-page-01.png" alt="상생경영영">
+        <img src="./images/292-sample-page-01.png" alt="상생경영영">
+        <img src="./images/292-sample-page-01.png" alt="상생경영영">
+      </p>
+      <p class="p2">
+        text-align:center; 가운데정렬<br>
+        <img src="./images/292-sample-page-01.png" alt="상생경영영">
+      </p>
+      <p class="p3">
+        text-align:right; 오른쪽정렬<br>
+        <img src="./images/292-sample-page-01.png" alt="상생경영영">
+      </p>
+
+  </div>
+</body>
+</html>

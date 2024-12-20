@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  /* 
+  display 속성이란?
+  태그의 성질을 결정하는 속성
+
+  1) block 요소 - div, li, dl, dt, dd, p
+  한 줄에 하나씩 태그가 나온다.
+  세로배열, width, height 값이 들어간다.
+
+  2) inline 요소 - a, spam, string, em
+  나열되서 태그가 나온다.
+  가로배열, width, height 값이 안들어간다.
+
+  3)inline-block 요소 - img
+  width, height 값이 들어간다. 나열이 된다. 가로배열
+  */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .box1 {
+    background-color: #fc6;
+  }
+  .box1 ul {
+    font-size: 0;
+  }
+  .box1 ul li {
+    background: tomato;
+    width: 200px;
+    padding: 10px;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .box2 {
+    background-color: #369;
+  }
+  .box2:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .box2 a{
+    background: green;
+    width: 200px;
+    padding: 10px;
+    display: block;
+    float: left;
+  }
+  
+ .box3 {
+  background: yellow;
+  padding: 10px;
+ }
+ .box3 p{
+  background: tomato;
+  width: 200px;
+  padding: 30px;
+  display: none;
+ }
+ .box3:hover p {
+  display: block;
+ }
+</style>
+
+</head>
+<body>
+    <div class="box1">
+        <ul>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+            <li>블록요소태그</li>
+        </ul>
+    </div>
+    <div class="box2">
+        <a href="#">인라인요소태그</a>
+        <a href="#">인라인요소태그</a>
+        <a href="#">인라인요소태그</a>
+        <a href="#">인라인요소태그</a>
+    </div>
+    <div class="box3">
+      <p>display:none</p>
+
+    </div>
+</body>
+</html>

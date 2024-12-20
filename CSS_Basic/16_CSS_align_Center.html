@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가운데정렬렬</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    li {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .box1 {
+      background-color: #fc6;
+    }
+    .box1 ul li {
+      background: tomato;
+      width: 200px;
+      padding: 10px;
+      display: block;
+      float: left;
+    }
+    .box1:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .box2 {
+      background-color: #369;
+    }
+    .box2 a{
+      background: green;
+      width: 200px;
+      padding: 10px;
+      display: block;
+      float: left;
+    }
+    .box2:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+     /* 
+     인라인요소를 가운데 정렬하는 방법
+     -정렬하고 싶은 요소의 부모나 조상이 block 요소일때 부모에게text-align: center;를 넣으면 된다.
+     
+     block 요소를 가운데 정렬하는 방법법(box3)
+     box3에는 width 값이 반드시 들어가야함
+     margin: 0 auto;가 들어가면 수평 가운데 정렬이됨
+     
+     box3_1을 가운데 정렬하기
+     block 요소는 width값이 꼭 있어야함
+     margin: 0 auto;
+     */
+     .box3 {
+      background: #fc6;
+      height: 400px;
+      width: 500px;
+      margin-top:  50px;
+      margin: 0 auto;
+     }
+     .box3_1 {
+      background: pink;
+      height: 200px;
+      width: 300px;
+      margin: 0 auto;
+     }
+     .box4 {
+      background: #fc6;
+      height: 400px;
+      width: 500px;
+      margin-top:  50px;
+      position: relative;
+     }
+     .box4_1 {
+      background: #369;
+      height: 200px;
+      width: 300px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -150px;
+      margin-top: -100px;
+     }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <ul>
+        <li>블록요소태그</li>
+        <li>블록요소태그</li>
+        <li>블록요소태그</li>
+        <li>블록요소태그</li>
+    </ul>
+  </div>
+  <div class="box2">
+      <a href="#">인라인요소태그</a>
+      <a href="#">인라인요소태그</a>
+      <a href="#">인라인요소태그</a>
+      <a href="#">인라인요소태그</a>
+  </div>
+  <div class="box3">
+      <div class="box3_1">
+        블락요소를 가운데 만드는 방법법
+      </div>
+  </div>
+  <div class="box4">
+    <div class="box4_1">
+      공중에 뜬 박스를 가운데 위치 잡을 때
+    </div>
+</div>
+</body>
+</html>
